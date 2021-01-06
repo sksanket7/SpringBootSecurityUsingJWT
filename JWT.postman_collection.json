@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "477da186-7404-4f22-8ead-19604b235f76",
+		"name": "JWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:2000/authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"sanket\",\r\n    \"password\":\"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2000/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:2000/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYW5rZXQiLCJleHAiOjE2MDk5NjcwMTEsImlhdCI6MTYwOTkzMTAxMX0.YKUYbFcFU9tjDdFIC5cBVL7F1Khd-6EcPk3BAXHQCDU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:2000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
